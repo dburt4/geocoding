@@ -27,7 +27,7 @@ export class MapComponent implements OnInit {
     ];
     this.geolocationService.getPosition().subscribe(
       (pos: Position) => {
-          console.log("Getting new position!");
+          console.log("Getting new position!", pos);
           this.currentPosition = new Marker (+(pos.coords.latitude), +(pos.coords.longitude), 1);
     });
   }
