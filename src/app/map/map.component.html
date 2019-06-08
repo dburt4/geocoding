@@ -4,6 +4,7 @@
   [mapTypeId]="mapType" 
   [zoom]="zoom"
   (mapClick)="addMarker($event.coords.lat, $event.coords.lng)"
+  streetViewControl="false"
 >
   <!-- <agm-marker [latitude]="lat" [longitude]="longitude"></agm-marker> -->
   <agm-marker *ngFor="let marker of markers" 

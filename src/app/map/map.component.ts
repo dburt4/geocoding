@@ -13,7 +13,7 @@ import { InfoSheetComponent } from '../components/info-sheet/info-sheet.componen
 export class MapComponent implements OnInit {
   startingLat = 40.259309;
   startingLong = -111.671877;
-  mapType = 'satellite';
+  mapType = 'roadmap';
   markers: Marker[] = [];
   zoom = 15;
   selectedMarker: Marker; 
@@ -27,6 +27,7 @@ export class MapComponent implements OnInit {
     ];
     this.geolocationService.getPosition().subscribe(
       (pos: Position) => {
+          console.log("Getting new position!");
           this.currentPosition = new Marker (+(pos.coords.latitude), +(pos.coords.longitude), 1);
     });
   }

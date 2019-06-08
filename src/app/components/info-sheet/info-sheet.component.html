@@ -1,14 +1,15 @@
 <mat-list>
     <h3 mat-subheader>{{ marker.name }} </h3>
-    <mat-list-item>
+    <!-- <mat-list-item>
         <p mat-line>Description: {{ marker.description }}</p>
-    </mat-list-item>
+    </mat-list-item> -->
+    <p>Description:</p>
+    <p> {{ marker.description }} </p>
     <mat-list-item><p mat-line>Hint: {{ marker.hint }} </p></mat-list-item>
     <mat-list-item><p mat-line>Size: {{ marker.size }} </p></mat-list-item>
     <mat-list-item><p mat-line>Placed: {{ marker.placed }} </p></mat-list-item>
     <mat-list-item><p mat-line>Last activity: {{ marker.activity }} </p></mat-list-item>
     <mat-divider></mat-divider>
-    <!-- <mat-list-item>Difficulty: {{ marker.difficulty }} </mat-list-item> -->
     <p>Difficulty: </p>
     <mat-progress-bar class="my-progress-bar" color="primary" mode="determinate" 
         [value]="marker.difficulty">

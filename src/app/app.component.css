@@ -1,0 +1,7 @@
+#main-title {
+    z-index: 10;
+    background: transparent;
+    position: fixed;
+    left: 23px;
+    color: gray;
+}
