@@ -25,10 +25,10 @@ export class MapComponent implements OnInit {
     this.markers = [
       new Marker(40.327730, -111.646325, 0.75),
     ];
-    // this.geolocationService.getPosition().subscribe(
-    //   (pos: Position) => {
-    //       this.currentPosition = new Marker (+(pos.coords.latitude), +(pos.coords.longitude), 1);
-    // });
+    this.geolocationService.getPosition().subscribe(
+      (pos: Position) => {
+          this.currentPosition = new Marker (+(pos.coords.latitude), +(pos.coords.longitude), 1);
+    });
   }
 
   addMarker(lat: number, lng: number) {
