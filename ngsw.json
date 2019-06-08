@@ -1,0 +1,84 @@
+{
+  "configVersion": 1,
+  "timestamp": 1559987333356,
+  "index": "https://dburt4.github.io/geocoding/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://dburt4.github.io/geocoding/favicon.ico",
+        "https://dburt4.github.io/geocoding/index.html",
+        "https://dburt4.github.io/geocoding/main-es2015.4c0fa631e1e2569308a2.js",
+        "https://dburt4.github.io/geocoding/main-es5.2e13cbaf9f2e4a92ae74.js",
+        "https://dburt4.github.io/geocoding/polyfills-es2015.e954256595c973372414.js",
+        "https://dburt4.github.io/geocoding/polyfills-es5.405730e5ac8f727bd7d7.js",
+        "https://dburt4.github.io/geocoding/runtime-es2015.858f8dd898b75fe86926.js",
+        "https://dburt4.github.io/geocoding/runtime-es5.741402d1d47331ce975c.js",
+        "https://dburt4.github.io/geocoding/styles.7b3c97380f45d7086f85.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://dburt4.github.io/geocoding/assets/icons/Location_dot_blue.png",
+        "https://dburt4.github.io/geocoding/assets/icons/icon-128x128.png",
+        "https://dburt4.github.io/geocoding/assets/icons/icon-144x144.png",
+        "https://dburt4.github.io/geocoding/assets/icons/icon-152x152.png",
+        "https://dburt4.github.io/geocoding/assets/icons/icon-192x192.png",
+        "https://dburt4.github.io/geocoding/assets/icons/icon-384x384.png",
+        "https://dburt4.github.io/geocoding/assets/icons/icon-512x512.png",
+        "https://dburt4.github.io/geocoding/assets/icons/icon-72x72.png",
+        "https://dburt4.github.io/geocoding/assets/icons/icon-96x96.png",
+        "https://dburt4.github.io/geocoding/assets/icons/location_dot_blue10x10.png",
+        "https://dburt4.github.io/geocoding/assets/icons/location_dot_blue20x20.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://dburt4.github.io/geocoding/assets/icons/Location_dot_blue.png": "dfa09e9ec7e2184af3f24d328cdfca7b265b0d9b",
+    "https://dburt4.github.io/geocoding/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://dburt4.github.io/geocoding/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://dburt4.github.io/geocoding/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://dburt4.github.io/geocoding/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://dburt4.github.io/geocoding/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://dburt4.github.io/geocoding/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://dburt4.github.io/geocoding/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://dburt4.github.io/geocoding/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://dburt4.github.io/geocoding/assets/icons/location_dot_blue10x10.png": "3352321ccb3aaa88770aee1594eb0e78b9d3c62b",
+    "https://dburt4.github.io/geocoding/assets/icons/location_dot_blue20x20.png": "a4236d32f890b6a49c691b3f2b68379ef369c401",
+    "https://dburt4.github.io/geocoding/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://dburt4.github.io/geocoding/index.html": "5d408eba5b3344318a48a83ed9426d3af96c5e87",
+    "https://dburt4.github.io/geocoding/main-es2015.4c0fa631e1e2569308a2.js": "65ccfcd97bb9e84fb9910b56640d48115e918d04",
+    "https://dburt4.github.io/geocoding/main-es5.2e13cbaf9f2e4a92ae74.js": "0eb46334c09a84c5f0130aa379024033fced1506",
+    "https://dburt4.github.io/geocoding/polyfills-es2015.e954256595c973372414.js": "ae2d1da695b0816436f21ff43f857a42b11a4e17",
+    "https://dburt4.github.io/geocoding/polyfills-es5.405730e5ac8f727bd7d7.js": "042d7744ef82a64c73310f1db253736731a03950",
+    "https://dburt4.github.io/geocoding/runtime-es2015.858f8dd898b75fe86926.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "https://dburt4.github.io/geocoding/runtime-es5.741402d1d47331ce975c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "https://dburt4.github.io/geocoding/styles.7b3c97380f45d7086f85.css": "91324341a943eae94060de5d05d9c678f48568e6"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
