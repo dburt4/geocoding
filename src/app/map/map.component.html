@@ -1,6 +1,6 @@
 <agm-map 
-  [latitude]="currentPostion.lat" 
-  [longitude]="currentPostion.long" 
+  [latitude]="startingLat" 
+  [longitude]="startingLong" 
   [mapTypeId]="mapType" 
   [zoom]="zoom"
   (mapClick)="addMarker($event.coords.lat, $event.coords.lng)"
@@ -8,12 +8,21 @@
   <!-- <agm-marker [latitude]="lat" [longitude]="longitude"></agm-marker> -->
   <agm-marker *ngFor="let marker of markers" 
     [latitude]="marker.lat"
-    [longitude]="marker.long"
-    label="COOL!"
+    [longitude]="marker.lng"
+    [label]="marker.label"
     [markerDraggable]="false"
     (markerClick)="setSelectedMarker($event)"
+
   >
     <agm-info-window>Hello world</agm-info-window>
   </agm-marker>
+  <agm-marker id="current-position"
+    [latitude]="currentPosition.lat"
+    [longitude]="currentPosition.lng"
+    [label]="currentPosition.label"
+    iconUrl="../../assets/icons/location_dot_blue20x20.png"
+  ></agm-marker>
 </agm-map>
-<p *ngIf="selectedMarker">Lat: {{ selectedMarker.lat }}, Long: {{ selectedMarker.long }} </p>
+<p *ngIf="selectedMarker">Lat: {{ selectedMarker.lat }}, Long: {{ selectedMarker.lng }} </p>
+<p>{{ markers | json }}</p>
+<p>{{ currentPosition | json }}</p>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { GeolocationService } from '../services/geolocation.service';
+import { Marker } from '../models/marker';
 
 @Component({
   selector: 'app-map',
@@ -8,40 +9,34 @@ import { GeolocationService } from '../services/geolocation.service';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
-  startingLat = 40.327730;
-  startingLong = -111.646325;
+  startingLat = 40.259309;
+  startingLong = -111.671877;
   mapType = 'satellite';
-  markers = [
-    { lat: 40.327730, long: -111.646325, alpha: 1 },
-  ];
-  zoom = 13;
-  selectedMarker; 
-  currentPostion = {
-    lat: 0, long: 0
-  }; 
+  markers: Marker[] = [];
+  zoom = 15;
+  selectedMarker: Marker; 
+  currentPosition: Marker = new Marker(0, 0, 0.75, "You are here!");
 
   constructor(private geolocationService: GeolocationService) { }
 
   ngOnInit() {
+    this.markers = [
+      new Marker(40.327730, -111.646325, 0.75),
+    ];
     this.geolocationService.getPosition().subscribe(
       (pos: Position) => {
-          this.currentPostion = {
-            lat:  +(pos.coords.latitude),
-            long: +(pos.coords.longitude)
-          };
+          this.currentPosition = new Marker (+(pos.coords.latitude), +(pos.coords.longitude), 1);
       });
   }
 
-  addMarker(lat: number, long: number) {
-    console.log("Adding marker!", lat, long);
-    this.markers.push({ lat, long, alpha: 0.4 });
+  addMarker(lat: number, lng: number) {
+    console.log("Adding marker!", lat, lng);
+    this.markers.push(new Marker(lat, lng, 0.75, "Cool"));
   }
 
+  // What was this for again? 
   setSelectedMarker(event) {
-    this.selectedMarker = {
-      lat: event.latitude,
-      long: event.longitude,
-      alpha: 0.4
-    };
+    console.log("Setting selected marker", event);
+    this.selectedMarker = new Marker(event.latitude, event.longitude, 0.75);
   }
 }
