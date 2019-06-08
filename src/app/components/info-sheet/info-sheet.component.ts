@@ -10,7 +10,7 @@ import { Marker } from 'src/app/models/marker';
 export class InfoSheetComponent implements OnInit {
 
   marker: Marker;
-  
+  showHint = false;
   constructor(@Inject(MAT_BOTTOM_SHEET_DATA) marker: Marker) { 
     this.marker = marker;
   }
