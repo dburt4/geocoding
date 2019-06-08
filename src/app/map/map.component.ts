@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { GeolocationService } from '../services/geolocation.service';
 import { Marker } from '../models/marker';
+import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
+import { InfoSheetComponent } from '../components/info-sheet/info-sheet.component';
 
 @Component({
   selector: 'app-map',
@@ -17,16 +19,16 @@ export class MapComponent implements OnInit {
   selectedMarker: Marker; 
   currentPosition: Marker = new Marker(0, 0, 0.75, "You are here!");
 
-  constructor(private geolocationService: GeolocationService) { }
+  constructor(private geolocationService: GeolocationService, private _bottomSheet: MatBottomSheet) { }
 
   ngOnInit() {
     this.markers = [
       new Marker(40.327730, -111.646325, 0.75),
     ];
-    this.geolocationService.getPosition().subscribe(
-      (pos: Position) => {
-          this.currentPosition = new Marker (+(pos.coords.latitude), +(pos.coords.longitude), 1);
-      });
+    // this.geolocationService.getPosition().subscribe(
+    //   (pos: Position) => {
+    //       this.currentPosition = new Marker (+(pos.coords.latitude), +(pos.coords.longitude), 1);
+    // });
   }
 
   addMarker(lat: number, lng: number) {
@@ -37,6 +39,24 @@ export class MapComponent implements OnInit {
   // What was this for again? 
   setSelectedMarker(event) {
     console.log("Setting selected marker", event);
-    this.selectedMarker = new Marker(event.latitude, event.longitude, 0.75);
+    let found = false;
+    for (let i = 0; i < this.markers.length; i++) {
+      if (event.latitude == this.markers[i].lat && event.longitude == this.markers[i].lng) {
+        this.selectedMarker = this.markers[i];
+        found = true;
+        break;
+      }
+    }
+    
+    if (!found) {
+      console.log("UNABLE TO update currently selected marker", event);
+      return;
+    }
+
+    this.openInfoSheet();
+  }
+
+  openInfoSheet() {
+    this._bottomSheet.open(InfoSheetComponent, { data: this.selectedMarker });
   }
 }
