@@ -324,7 +324,7 @@ var MapComponent = /** @class */ (function () {
             new _models_marker__WEBPACK_IMPORTED_MODULE_3__["Marker"](40.327730, -111.646325, 0.75),
         ];
         this.geolocationService.getPosition().subscribe(function (pos) {
-            console.log("Getting new position!");
+            console.log("Getting new position!", pos);
             _this.currentPosition = new _models_marker__WEBPACK_IMPORTED_MODULE_3__["Marker"](+(pos.coords.latitude), +(pos.coords.longitude), 1);
         });
     };
